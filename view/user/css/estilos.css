@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 18px; }
+
+header {
+  position: relative;
+  z-index: 1; }
+  header .contenedor_logo_menu {
+    padding: 25px 0;
+    border-bottom: 1px solid rgba(0, 29, 70, 0.4);
+    margin-bottom: 50px; }
+    header .contenedor_logo_menu .logo a {
+      display: block; }
+      header .contenedor_logo_menu .logo a img {
+        vertical-align: top; }
+    header .contenedor_logo_menu .menu {
+      text-align: right;
+      line-height: 50px; }
+      header .contenedor_logo_menu .menu a {
+        color: #000000;
+        margin-left: 60px;
+        font-size: 18px; }
+
+.iniciar_sesion .modal-header {
+  margin: 0;
+  padding: 0;
+  height: 224px;
+  background: url("../img/iniciar_sesion.jpg"), #EFF5FE;
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat; }
+
+.main .descripcion_pagina .texto {
+  color: #001D46;
+  text-align: left;
+  margin-bottom: 20px; }
+  .main .descripcion_pagina .texto .titulo {
+    font-family: "Alegreya", serif;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 52px;
+    font-weight: 600; }
+  .main .descripcion_pagina .texto .titulo2 {
+    font-family: "Alegreya", serif;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 52px;
+    font-weight: 600; }
+.main .descripcion_pagina .descripcion {
+  color: #000000;
+  text-align: left; }
+  .main .descripcion_pagina .descripcion .sub_parrafo,
+  .main .descripcion_pagina .descripcion .subparrafo2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 46px;
+    margin-bottom: 56px; }
+  .main .descripcion_pagina .descripcion .contenedor-btns {
+    text-align: center; }
+    .main .descripcion_pagina .descripcion .contenedor-btns .informacion {
+      border-radius: 5px;
+      border: 2px solid #001D46;
+      color: #001D46;
+      padding: 12px 0;
+      font-weight: 700;
+      width: 150px;
+      display: inline-block;
+      text-align: center;
+      margin: 0 10px; }
+      .main .descripcion_pagina .descripcion .contenedor-btns .informacion:hover {
+        text-decoration: none;
+        background: #012557;
+        color: #ffffff;
+        transition-duration: 0.1s; }
+    .main .descripcion_pagina .descripcion .contenedor-btns .denunciar {
+      border-radius: 5px;
+      background: #001D46;
+      border: 2px solid #001D46;
+      color: #ffffff;
+      padding: 12px 0;
+      font-weight: 700;
+      width: 150px;
+      display: inline-block;
+      text-align: center;
+      margin: 0 10px; }
+      .main .descripcion_pagina .descripcion .contenedor-btns .denunciar:hover {
+        text-decoration: none;
+        background: #012961;
+        transition-duration: 0.2s; }
+  .main .descripcion_pagina .descripcion .foto {
+    float: right;
+    margin-right: 20px;
+    margin-top: -20px; }
+  .main .descripcion_pagina .descripcion .foto_denuncia {
+    position: relative;
+    z-index: 0;
+    margin-left: 50px;
+    margin-top: -250px; }
+.main .conoce-mas {
+  padding: 100px 0;
+  background: url("../img/curvas.jpg"), #EFF5FE;
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  text-align: center; }
+  .main .conoce-mas .titulo-principal {
+    text-align: center;
+    font-family: "Alegreya", serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #001D46;
+    margin-bottom: 60px; }
+  .main .conoce-mas .recuadro {
+    background: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 15px rgba(123, 123, 123, 0.15);
+    border-radius: 16px; }
+    .main .conoce-mas .recuadro .foto {
+      width: 100%;
+      margin-bottom: 20px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px; }
+    .main .conoce-mas .recuadro .titulo {
+      font-family: "Alegreya", serif;
+      color: #001D46;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 500;
+      margin-bottom: 8px; }
+    .main .conoce-mas .recuadro .texto {
+      margin: 0 20px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 28px; }
+    .main .conoce-mas .recuadro a {
+      width: 40%;
+      padding: 12px 0;
+      display: inline-block;
+      text-align: center;
+      border-radius: 5px;
+      font-weight: 700;
+      background: #001D46;
+      color: #fff;
+      margin-bottom: 28px; }
+      .main .conoce-mas .recuadro a:hover {
+        text-decoration: none;
+        background: #012961; }
+.main .estadisticas {
+  padding: 30px 0; }
+  .main .estadisticas .titulo {
+    text-align: center;
+    font-family: "Alegreya", serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #001D46;
+    margin-bottom: 60px; }
+  .main .estadisticas .estadistica {
+    text-align: center; }
+    .main .estadisticas .estadistica img {
+      border-radius: 50%;
+      vertical-align: top;
+      margin-bottom: 30px; }
+    .main .estadisticas .estadistica .primera_linea {
+      font-family: "Alegreya", serif;
+      font-weight: 500;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #001D46; }
+    .main .estadisticas .estadistica .texto {
+      margin-bottom: 20px;
+      line-height: 28px; }
+    .main .estadisticas .estadistica .enlace {
+      font-size: 16;
+      color: #a4a4a4;
+      margin-bottom: 30px; }
+      .main .estadisticas .estadistica .enlace:hover {
+        color: #0077cc; }
+.main .cais-quindio {
+  padding: 100px 0;
+  background: url("../img/curvas_footer.jpg"), #EFF5FE;
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat; }
+  .main .cais-quindio .titulo {
+    text-align: center;
+    font-family: "Alegreya", serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #001D46;
+    margin-bottom: 60px; }
+  .main .cais-quindio .ubicacion {
+    border-radius: 16px;
+    text-align: center; }
+    .main .cais-quindio .ubicacion iframe {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0px 0px 15px rgba(123, 123, 123, 0.15); }
+  .main .cais-quindio .texto {
+    padding: 70px 28px;
+    background: #ffffff;
+    height: 340px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0px 0px 15px rgba(123, 123, 123, 0.15); }
+.main .formulario .texto .titulo {
+  text-align: center;
+  font-family: "Alegreya", serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #001D46;
+  margin-bottom: 60px; }
+.main .formulario .contenedor-formulario .huellas {
+  background: url("../img/huellas1.png"), #EFF5FE;
+  margin-right: 25px; }
+.main .formulario .contenedor-formulario .huellas2 {
+  background: url("../img/huellas2.png"), #EFF5FE;
+  margin-left: 25px; }
+.main .formulario .contenedor-formulario .huellas,
+.main .formulario .contenedor-formulario .huellas2,
+.main .formulario .contenedor-formulario .huellas3 {
+  width: 60px;
+  background-size: cover;
+  background-position: center 0;
+  background-repeat: no-repeat;
+  text-align: center; }
+.main .formulario .contenedor-formulario .vacio,
+.main .formulario .contenedor-formulario .vacio2 {
+  position: relative;
+  width: 60px;
+  height: 500px; }
+.main .formulario .contenedor-formulario .vacio {
+  margin-left: 25px; }
+.main .formulario .contenedor-formulario .vacio2 {
+  margin-right: 25px; }
+.main .formulario .contenedor-formulario .contenido-formulario .subtitulo {
+  font-family: "Alegreya", serif;
+  font-weight: 500;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #001D46; }
+.main .formulario .contenedor-formulario .contenido-formulario section {
+  margin-bottom: 28px; }
+.main .formulario .contenedor-formulario .contenido-formulario .tipo-denuncia input,
+.main .formulario .contenedor-formulario .contenido-formulario .informacion-adicional input {
+  margin-bottom: 16px; }
+.main .formulario .contenedor-formulario .contenido-formulario .condiciones-animal {
+  margin-left: 25px; }
+  .main .formulario .contenedor-formulario .contenido-formulario .condiciones-animal .form-row {
+    justify-content: center;
+    margin-bottom: 28px; }
+    .main .formulario .contenedor-formulario .contenido-formulario .condiciones-animal .form-row .custom-radio {
+      margin-left: 100px; }
+.main .formulario .contenedor-formulario .contenido-formulario .informacion-adicional textarea,
+.main .formulario .contenedor-formulario .contenido-formulario .informacion-adicional .form-check,
+.main .formulario .contenedor-formulario .contenido-formulario .informacion-adicional .custom-file {
+  margin-bottom: 16px; }
+.main .formulario .contenedor-formulario .contenido-formulario .boton {
+  justify-content: center;
+  margin-bottom: 120px; }
+  .main .formulario .contenedor-formulario .contenido-formulario .boton .btn-primary {
+    border: 0px;
+    background: #001D46;
+    padding: 12px 0;
+    font-weight: 500;
+    width: 150px; }
+    .main .formulario .contenedor-formulario .contenido-formulario .boton .btn-primary:hover {
+      background: #012557;
+      color: #ffffff; }
+
+footer {
+  padding: 25px 0;
+  background: #001D46;
+  text-align: center; }
+  footer .titulo {
+    text-align: center;
+    font-family: "Alegreya", serif;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 24px; }
+  footer .logo {
+    margin-right: 24px; }
+  footer .menu {
+    text-align: center; }
+    footer .menu a {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 10px;
+      color: #ffffff; }
+  footer .numero {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffffff; }
+
+@media screen and (max-width: 1100px) {
+  header .contenedor_logo_menu .menu a {
+    margin: 0px 20px; } }
+@media screen and (max-width: 992px) {
+  header .contenedor_logo_menu .logo {
+    margin-bottom: 20px;
+    text-align: center; }
+  header .contenedor_logo_menu .menu {
+    text-align: center; }
+    header .contenedor_logo_menu .menu a {
+      margin: 0px 20px; }
+
+  .main .descripcion_pagina .texto {
+    font-size: 16px; }
+    .main .descripcion_pagina .texto .titulo {
+      font-size: 2.5em; }
+  .main .descripcion_pagina .descripcion {
+    margin-bottom: 50px; }
+    .main .descripcion_pagina .descripcion .sub_parrafo {
+      font-size: 1.5em; }
+  .main .descripcion_pagina .foto,
+  .main .descripcion_pagina .foto_denuncia {
+    display: none; }
+  .main .conoce-mas {
+    padding: 50px 0;
+    background: #EFF5FE; }
+    .main .conoce-mas .informacion .recuadro {
+      margin-bottom: 40px; }
+      .main .conoce-mas .informacion .recuadro .texto {
+        margin-bottom: 32px;
+        text-align: center; }
+  .main .estadisticas {
+    padding: 50px; }
+    .main .estadisticas .estadistica {
+      margin-bottom: 60px; }
+  .main .cais-quindio {
+    padding: 50px 0;
+    background: #EFF5FE; }
+    .main .cais-quindio .ubicacion {
+      margin-bottom: 40px; }
+
+  footer .convenio {
+    margin-bottom: 20px; }
+  footer .menu {
+    margin-bottom: 20px; }
+    footer .menu a {
+      margin-left: 20px; } }
+
+/*# sourceMappingURL=estilos.css.map */
