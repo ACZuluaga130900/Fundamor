@@ -73,9 +73,77 @@
                 <div class="row contenedor-formulario">
                     <div class="col-md-12">
                         <!-- Formulario de denuncia animal-->
-                        <form class="needs-validation contenido-formulario" novalidate>
-                            <div class="form-row">
+                        <form name="formularioDenuncia" method="GET" action="capturar.php"class="needs-validation contenido-formulario" novalidate>
+                        <!-- Titulo para la seccion informacion adicional -->
+                        <div class="form-row">
                                 <div class="col-md-1 huellas"></div>
+                                <div class="col-md-9">
+                                    <label class="subtitulo" for="informacion-adicional">Información  acerca de
+                                        los hechos</label>
+                                    <section class="informacion-adicional" id="informacion-adicional">
+                                        <div class="form-row">
+                                            <div class="col-10">
+                                                <label for="lugar_hechos">Lugar de los hechos</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fila municipio y direccion -->
+                                        <div class="form-row">
+                                            <!-- Tipo de documento -->
+                                            <div class="col-md-4">
+                                                <select v-model="newUser.document_type" class="custom-select"
+                                                    id="municipio" required>
+                                                    <option selected value="">Municipio</option>
+                                                    <option v-for="document_type in document_types">
+                                                        {{ document_type.descripcion }}</option>
+                                                </select>
+                                            </div>
+
+                                            <!-- Campo direccion de los hechos -->
+                                            <div class="col-8">
+                                                <input name="direccion" type="text"
+                                                    class="form-control" id="direccion_hechos"
+                                                    placeholder="Dirección de los hechos" required>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fila del campo de texto descripcion de los hechos -->
+                                        <div class="form-row">
+                                            <dic class="col-12">
+                                                <label for="message-text" class="col-form-label">Descripción</label>
+                                                <textarea class="form-control" id="message-text"
+                                                    placeholder="Descripción de lo hechos" required></textarea>
+                                            </dic>
+                                        </div>
+
+                                        <!-- Fila del campo adjuntar evidencias -->
+                                        <div class="form-row">
+                                            <label for="inputGroupFile03" class="col-form-label">Adjuntar evidencias del
+                                                maltrato</label>
+                                            <div class="custom-file">
+                                                <input name="url"type="file" class="custom-file-input" id="inputGroupFile03"
+                                                    aria-describedby="inputGroupFileAddon03">
+                                                <label class="custom-file-label" for="inputGroupFile03">Elegir archivo</label>
+                                            </div>
+                                        </div>
+
+                                        <!-- Fila del checkbox terminos y condiciones -->
+                                        <div class="form-row">
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                        id="invalidCheck" required>
+                                                    <label class="form-check-label" for="invalidCheck">
+                                                        He leído y acepto los términos y condiciones
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-1 vacio"></div>
+
+
                                 <div class="col-md-9">
                                     <!-- Titulo para la seccion tipo de denuncia -->
                                     <label class="subtitulo" for="tipo-denuncia">Tipo de denuncia</label>
@@ -84,7 +152,7 @@
                                         <div class="form-row">
                                             <div class="col-12">
                                                 <label for="nombre">Nombre(s)</label>
-                                                <input v-model="newUser.first_name" type="text" class="form-control"
+                                                <input name="nombres_denunciante" type="text" class="form-control"
                                                     id="validationCustom01" placeholder="Nombre(s)" required>
                                             </div>
                                         </div>
@@ -93,12 +161,10 @@
                                         <div class="form-row">
                                             <div class="col-12">
                                                 <label for="apellidos">Apellidos</label>
-                                                <input v-model="newUser.last_name" type="text" class="form-control"
+                                                <input name="apellidos_denunciante" type="text" class="form-control"
                                                     id="apellidos" placeholder="Apellidos" required>
                                             </div>
                                         </div>
-
-
                                         <div class="form-row">
                                             <div class="col-10">
                                                 <label for="update_tipo_documento">Documento de identidad</label>
@@ -119,7 +185,7 @@
 
                                             <!-- Campo numero de documento -->
                                             <div class="col-8">
-                                                <input v-model="newUser.document_number" type="text"
+                                                <input name="documento_identidad_denunciante" type="text"
                                                     class="form-control" id="numero_documento"
                                                     placeholder="Número de documento" required>
                                             </div>
@@ -129,7 +195,7 @@
                                         <div class="form-row">
                                             <div class="col-12">
                                                 <label for="correo_electronico">Correo Electrónico</label>
-                                                <input v-model="newUser.email" type="text" class="form-control"
+                                                <input name="email_denunciante" type="text" class="form-control"
                                                     id="correo_electronico" placeholder="Correo electrónico" required>
                                             </div>
 
@@ -139,27 +205,22 @@
                                         <div class="form-row">
                                             <div class="col-12">
                                                 <label for="numero_telefonico">Número telefónico</label>
-                                                <input v-model="newUser.telephone_number" type="text"
+                                                <input name="telefono_denunciante" type="text"
                                                     class="form-control" id="numero_telefonico"
                                                     placeholder="Número telefónico" required>
                                             </div>
-
                                         </div>
-                                    </section>
+                                    </section>                               
 
-                                </div>
-                                <div class="col-md-1 vacio">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col-md-1 vacio"></div>
-                                <div class="col-md-9">
-                                    <label class="subtitulo" for="condiciones-animal">Condiciones del animal</label>
-                                    <section class="condiciones-animal" id="condiciones-animal">
-                                        <!-- Enunciado de la pregunta -->
-                                        <label for="pregunta1">1. ¿ El animal sufre de hambre o sed, presenta síntomas
-                                            de
+                                    <!-- Titulo para la seccion condiciones del animal -->   
+                                    <div class="form-row">
+                                        <div class="col-md-1 vacio"></div>
+                                        <div class="col-md-9">
+                                            <label class="subtitulo" for="condiciones-animal">Condiciones del animal</label>
+                                            <section class="condiciones-animal" id="condiciones-animal">
+                                                <!-- Enunciado de la pregunta -->
+                                                <label for="pregunta1">1. ¿El animal sufre de hambre o sed, presenta síntomas
+                                                    de
                                             desnutrición?</label>
                                         <!-- Opciones de respuesta para la pregunta 1 -->
                                         <div class="form-row" id="pregunta1">
@@ -192,7 +253,7 @@
                                         </div>
 
                                         <!-- Enunciado de la pregunta -->
-                                        <label for="pregunta2">2. ¿ El animal sufre injustificadamente malestar físico o
+                                        <label for="pregunta2">2. ¿El animal sufre injustificadamente malestar físico o
                                             dolor?</label>
                                         <!-- Opciones de respuesta para la pregunta 2 -->
                                         <div class="form-row" id="pregunta2">
@@ -225,7 +286,7 @@
                                         </div>
 
                                         <!-- Enunciado de la pregunta -->
-                                        <label for="pregunta3">3. ¿ El animal sufre de enfermedades por negligencia o
+                                        <label for="pregunta3">3. ¿El animal sufre de enfermedades por negligencia o
                                             descuido?</label>
                                         <!-- Opciones de respuesta para la pregunta 3 -->
                                         <div class="form-row" id="pregunta3">
@@ -258,7 +319,7 @@
                                         </div>
 
                                         <!-- Enunciado de la pregunta -->
-                                        <label for="pregunta4">4. ¿ El animal es sometido a condiciones de miedo o
+                                        <label for="pregunta4">4. ¿El animal es sometido a condiciones de miedo o
                                             estrés?</label>
                                         <!-- Opciones de respuesta para la pregunta 4 -->
                                         <div class="form-row" id="pregunta4">
@@ -291,7 +352,7 @@
                                         </div>
 
                                         <!-- Enunciado de la pregunta -->
-                                        <label for="pregunta5">5. ¿ El espacio donde se encuentra ubicado el animal es
+                                        <label for="pregunta5">5. ¿El espacio donde se encuentra ubicado el animal es
                                             adecuado
                                             para que este se exprese de forma natural ?</label>
                                         <!-- Opciones de respuesta para la pregunta 5 -->
@@ -325,7 +386,7 @@
                                         </div>
 
                                         <!-- Enunciado de la pregunta -->
-                                        <label for="pregunta6">6. ¿ El responsable del animal lo agrede de forma
+                                        <label for="pregunta6">6. ¿El responsable del animal lo agrede de forma
                                             física?</label>
                                         <!-- Opciones de respuesta para la pregunta 6 -->
                                         <div class="form-row" id="pregunta6">
@@ -358,7 +419,7 @@
                                         </div>
 
                                         <!-- Enunciado de la pregunta -->
-                                        <label for="pregunta7">7. ¿El responsable del animal lo agrede de forma
+                                        <label for="pregunta7">7.¿El responsable del animal lo agrede de forma
                                             verbal?</label>
                                         <!-- Opciones de respuesta para la pregunta 7 -->
                                         <div class="form-row" id="pregunta7">
@@ -429,125 +490,12 @@
                                 </div>
                                 <div class="col-md-1 huellas2"></div>
                             </div>
-                            <!-- Titulo para la seccion condiciones del animal -->
-
-                            <div class="form-row">
-                                <div class="col-md-1 huellas"></div>
-                                <div class="col-md-9">
-                                    <label class="subtitulo" for="informacion-adicional">Información adicional acerca de
-                                        los hechos</label>
-                                    <section class="informacion-adicional" id="informacion-adicional">
-                                        <!-- Fila del campo de texto nombre del resposnable -->
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <label for="nombre_responsable">Nombre del responsable</label>
-                                                <input v-model="newUser.first_name" type="text" class="form-control"
-                                                    id="validationCustom01" placeholder="Nombre del responsable"
-                                                    required>
-                                            </div>
-                                        </div>
-
-                                        <!-- Fila del campo de texto nombre del animal -->
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <label for="nombre_animal">Nombre del animal</label>
-                                                <input v-model="newUser.last_name" type="text" class="form-control"
-                                                    id="nombre_animal" placeholder="Nombre del animal" required>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="form-row">
-                                            <div class="col-10">
-                                                <label for="lugar_hechos">Lugar de los hechos</label>
-                                            </div>
-                                        </div>
-
-                                        <!-- Fila municipio y direccion -->
-                                        <div class="form-row">
-                                            <!-- Tipo de documento -->
-                                            <div class="col-md-4">
-                                                <select v-model="newUser.document_type" class="custom-select"
-                                                    id="municipio" required>
-                                                    <option selected value="">Municipio</option>
-                                                    <option v-for="document_type in document_types">
-                                                        {{ document_type.descripcion }}</option>
-                                                </select>
-                                            </div>
-
-                                            <!-- Campo direccion de los hechos -->
-                                            <div class="col-8">
-                                                <input v-model="newUser.document_number" type="text"
-                                                    class="form-control" id="direccion_hechos"
-                                                    placeholder="Dirección de los hechos" required>
-                                            </div>
-                                        </div>
-
-                                        <!-- Fila del campo de texto correo electronico -->
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <label for="correo_electronico">Correo Electrónico</label>
-                                                <input v-model="newUser.email" type="text" class="form-control"
-                                                    id="correo_electronico" placeholder="Correo electrónico" required>
-                                            </div>
-
-                                        </div>
-
-                                        <!-- Fila del campo de texto numero telefonico -->
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <label for="numero_telefonico">Número telefónico</label>
-                                                <input v-model="newUser.telephone_number" type="text"
-                                                    class="form-control" id="numero_telefonico"
-                                                    placeholder="Número telefónico" required>
-                                            </div>
-                                        </div>
-
-                                        <!-- Fila del campo de texto descripcion de los hechos -->
-                                        <div class="form-row">
-                                            <dic class="col-12">
-                                                <label for="message-text" class="col-form-label">Descripción</label>
-                                                <textarea class="form-control" id="message-text"
-                                                    placeholder="Descripción de lo hechos" required></textarea>
-                                            </dic>
-                                        </div>
-
-                                        <!-- Fila del campo adjuntar evidencias -->
-                                        <div class="form-row">
-                                            <label for="inputGroupFile03" class="col-form-label">Adjuntar evidencias del
-                                                maltrato</label>
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="inputGroupFile03"
-                                                    aria-describedby="inputGroupFileAddon03">
-                                                <label class="custom-file-label" for="inputGroupFile03">Choose
-                                                    file</label>
-                                            </div>
-                                        </div>
-
-                                        <!-- Fila del checkbox terminos y condiciones -->
-                                        <div class="form-row">
-                                            <div class="col-12">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value=""
-                                                        id="invalidCheck" required>
-                                                    <label class="form-check-label" for="invalidCheck">
-                                                        He leído y acepto los términos y condiciones
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                                <div class="col-md-1 vacio"></div>
-
-                            </div>
-
-                            <!-- Titulo para la seccion informacion adicional -->
-
+                                                 
 
                             <div class="form-row boton">
                                 <button class="btn btn-primary" type="submit">Enviar formulario</button>
                             </div>
+                        </div>
 
                         </form>
                     </div>

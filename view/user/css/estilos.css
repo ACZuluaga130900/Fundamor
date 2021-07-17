@@ -7,7 +7,11 @@ body {
   font-size: 18px; }
 
 header {
-  position: relative;
+  position: fixed;
+  left: 0;
+  top:0;
+  right:0;
+  background: #333;
   z-index: 1; }
   header .contenedor_logo_menu {
     padding: 25px 0;
@@ -21,7 +25,7 @@ header {
       text-align: right;
       line-height: 50px; }
       header .contenedor_logo_menu .menu a {
-        color: #000000;
+        color: #c41b1b;
         margin-left: 60px;
         font-size: 18px; }
 
@@ -250,7 +254,7 @@ header {
   margin-bottom: 28px; }
 .main .formulario .contenedor-formulario .contenido-formulario .tipo-denuncia input,
 .main .formulario .contenedor-formulario .contenido-formulario .informacion-adicional input {
-  margin-bottom: 16px; }
+  margin-bottom: 16px; color: #0077cc; }
 .main .formulario .contenedor-formulario .contenido-formulario .condiciones-animal {
   margin-left: 25px; }
   .main .formulario .contenedor-formulario .contenido-formulario .condiciones-animal .form-row {
