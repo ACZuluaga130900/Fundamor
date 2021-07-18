@@ -7,11 +7,10 @@ body {
   font-size: 18px; }
 
 header {
-  position: fixed;
+  position: auto;
   left: 0;
   top:0;
   right:0;
-  background: #333;
   z-index: 1; }
   header .contenedor_logo_menu {
     padding: 25px 0;
@@ -25,7 +24,7 @@ header {
       text-align: right;
       line-height: 50px; }
       header .contenedor_logo_menu .menu a {
-        color: #c41b1b;
+        color: #000000;
         margin-left: 60px;
         font-size: 18px; }
 

@@ -91,23 +91,22 @@
                                         <div class="form-row">
                                             <!-- Tipo de documento -->
                                             <div class="col-md-4">
-                                                <select  class="form-control" id="select_usuario" onchange="select_usuario()">
-                                                    <option selected value="">Municipio</option>
-                                                    <option v-for="document_type in document_types">
-                                                        {{ document_type.descripcion }}</option>
+                                                <select  class="form-control" id="select_usuario" >
+                                                    <option value="">Municipio</option>     
                                                     <?php
+                                                    
                                                     require '../conector/conexion.php';
-                                                    $sql_s = mysql_query("SELECT `descripcion` FROM `tipo_documento` ORDER BY `id_tipo_documento`");
+                                                    $sql_s = mysql_query("SELECT descripcion FROM tipo_documento ORDER BY id_tipo_documento");
                                                     while ($row_s = mysql_fetch_array($sql_s))
                                                     {
                                                         $id_tipo_documento = $row_s['id_tipo_documento'];
                                                         $descripcion = $row_s['descripcion'];
                                                         ?>  
                                                         <option value="<?php echo $id_tipo_documento; ?>"><?php echo $nombre; ?></option>
-                                                        <?php 
-
+                                                        
+                                                        <?php
                                                     }
-                                                    ?>
+                                                    ?>                                   
                                                 </select>
                                             </div>
 
@@ -155,7 +154,7 @@
                                 </div>
                                 <div class="col-md-1 vacio"></div>
 
-
+                                <div class="col-md-1 vacio"></div>
                                 <div class="col-md-9">
                                     <!-- Titulo para la seccion tipo de denuncia -->
                                     <label class="subtitulo" for="tipo-denuncia">Tipo de denuncia</label>
